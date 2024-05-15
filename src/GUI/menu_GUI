@@ -1,0 +1,92 @@
+from kivy.app import App
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.label import Label
+from kivy.uix.textinput import TextInput
+from kivy.uix.button import Button
+from kivy.uix.popup import Popup
+import sys
+sys.path.append("src")
+from logica.huffman_cleanCode import HuffmanCoding
+
+class HuffmanMenuApp(App):
+    """
+    Clase de la aplicación Kivy para interactuar con Huffman Coding
+    """
+
+    def build(self):
+        """
+        Método para construir la interfaz de la aplicación.
+        """
+        self.huffman_coding = HuffmanCoding()
+        
+        layout = BoxLayout(orientation='vertical')
+        
+        self.output_label = Label(text="--- Menú de Huffman Coding ---")
+        layout.add_widget(self.output_label)
+        
+        self.text_input = TextInput(hint_text="Ingresa el texto")
+        layout.add_widget(self.text_input)
+        
+        self.result_output = TextInput(hint_text="Resultado")
+        self.result_output.disabled = False
+        layout.add_widget(self.result_output)
+        
+        encode_button = Button(text="Codificar texto")
+        encode_button.bind(on_press=self.encode_text)
+        layout.add_widget(encode_button)
+        
+        decode_button = Button(text="Decodificar texto")
+        decode_button.bind(on_press=self.decode_text)
+        layout.add_widget(decode_button)
+        
+        return layout
+
+    def show_error_popup(self, error_message):
+        """
+        Método para mostrar un popup con el mensaje de error.
+        """
+        popup = Popup(title='Error', content=Label(text=error_message), size_hint=(None, None), size=(800, 200))
+        popup.open()
+
+    def encode_text(self, instance):
+        """
+        Método para codificar el texto ingresado por el usuario sin caracteres repetidos.
+        """
+        try:
+            text = self.text_input.text
+            if any(text[i] == text[i+1] == text[i+2] for i in range(len(text) - 2)):
+                raise ValueError("No se permiten más de 2 caracteres repetidos seguidos en el texto.")
+            
+            encoded = self.huffman_coding.encode(text=text)
+            self.result_output.text = f"Texto codificado: {encoded}"
+            self.text_input.text = ""  # Limpiar el contenido del TextInput
+        except Exception as e:
+            self.show_error_popup(str(e))
+    
+            
+
+    def decode_text(self, instance):
+        """
+        Método para decodificar el texto ingresado por el usuario.
+        """
+        try:
+            text_to_decode = self.text_input.text
+            decoded_text = self.huffman_coding.decode(text_to_decode)
+            self.result_output.text = f"Texto decodificado: {decoded_text}"
+            self.text_input.text = ""  # Limpiar el contenido del TextInput
+        except Exception as e:
+            self.show_error_popup(str(e))
+
+if __name__ == '__main__':
+    HuffmanMenuApp().run()
+
+
+
+
+
+
+
+
+
+
+
