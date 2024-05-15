@@ -22,11 +22,11 @@ Para ejecutar el programa y codificar un texto, sigue los siguientes pasos:
 
 - Clona el repositorio o descarga los archivos del programa.
 
-    `git clone https://github.com/Petr0510/Proyecto_cleanCodeDB1.git`
+    `git clone https://github.com/Petr0510/Proyecto_cleanCodeDB1-main.git`
 
 - Abre una terminal en la carpeta donde se encuentran los archivos del programa.
 
-    `cd Proyecto_cleanCodeDB1`
+    `cd Proyecto_cleanCodeDB1-main`
 
 - Ejecuta el siguiente comando para iniciar el programa: 
 
@@ -73,7 +73,7 @@ El programa incluye pruebas unitarias para verificar su correcto funcionamiento.
 
 - Ubicate en la carpeta del programa:
 
-    `cd Proyecto_cleanCodeDB1`
+    `cd Proyecto_cleanCodeDB1-main`
 
 - Ejecuta el siguiente comando:
 
