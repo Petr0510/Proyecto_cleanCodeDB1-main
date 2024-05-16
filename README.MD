@@ -52,17 +52,17 @@ Para ejecutar el programa y codificar un texto, sigue los siguientes pasos:
 
 2. Ejecutar el siguiente comando
 
-    `python src/GUI/menu_GUI`
+`    python src/GUI/menu_GUI`
 
 ## NOTA: 
 
 Para correr el programa, debe de crearse un archivo llamado SecretConfig.py en donde debera agregar la siguiente informacion obtenida de su base de datos de neon.tech:
 
-PGDATABASE = "tu informacion" 
-PGUSER = "tu informacion" 
-PGPASSWORD = "tu informacion" 
-PGHOST = "tu informacion" 
-PGPORT = 5432 # POR DEFECTO ES 5432, PERO PUEDE CAMBIAR EN SU DB 
+`PGDATABASE = "tu informacion"`
+`PGUSER = "tu informacion" `
+`PGPASSWORD = "tu informacion" `
+`PGHOST = "tu informacion"` 
+`PGPORT = 5432 # POR DEFECTO ES 5432, PERO PUEDE CAMBIAR EN SU DB `
 
 
 ### Ejecución de Pruebas Unitarias
