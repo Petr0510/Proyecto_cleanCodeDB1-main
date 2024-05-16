@@ -56,7 +56,7 @@ Para ejecutar el programa y codificar un texto, sigue los siguientes pasos:
 
 ## NOTA: 
 
-Para correr el programa, debe de crearse un archivo llamado SecretConfig.py en donde debera agregar la siguiente informacion obtenida de su base de datos de neon.tech:
+Para correr el programa, debe de crearse un archivo llamado SecretConfig.py en la raiz del programa, en donde debera agregar la siguiente informacion obtenida de su base de datos creada en neon.tech:
 
 
 #### PGDATABASE = "Nombre de la base de datos"
