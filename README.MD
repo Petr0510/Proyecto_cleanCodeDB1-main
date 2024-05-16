@@ -54,6 +54,17 @@ Para ejecutar el programa y codificar un texto, sigue los siguientes pasos:
 
     `python src/GUI/menu_GUI`
 
+## NOTA: 
+
+Para correr el programa, debe de crearse un archivo llamado SecretConfig.py en donde debera agregar la siguiente informacion obtenida de su base de datos de neon.tech:
+
+PGDATABASE = "tu informacion"
+PGUSER = "tu informacion"
+PGPASSWORD = "tu informacion"
+PGHOST = "tu informacion"
+PGPORT = 5432 # POR DEFECTO ES 5432, PERO PUEDE CAMBIAR EN SU DB
+
+
 ### Ejecución de Pruebas Unitarias
 El programa incluye pruebas unitarias para verificar su correcto funcionamiento. Para ejecutar las pruebas unitarias, sigue estos pasos:
 
