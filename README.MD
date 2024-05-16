@@ -61,13 +61,13 @@ Para correr el programa, debe de crearse un archivo llamado SecretConfig.py en d
 
 #### PGDATABASE = "Nombre de la base de datos"
 ---
-PGUSER = "Nombre de usuario asignado" 
+#### PGUSER = "Nombre de usuario asignado" 
 ---
-PGPASSWORD = "Contraseña asiganda por Neon.tech" 
+#### PGPASSWORD = "Contraseña asiganda por Neon.tech" 
 ---
-PGHOST = "Host asignado"
+#### PGHOST = "Host asignado"
 ---
-PGPORT = 5432 # POR DEFECTO ES 5432, PERO PUEDE CAMBIAR EN SU DB `
+#### PGPORT = 5432 # POR DEFECTO ES 5432, PERO PUEDE CAMBIAR EN SU DB
 ---
 
 ### Ejecución de Pruebas Unitarias
